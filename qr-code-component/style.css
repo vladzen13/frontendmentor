@@ -13,9 +13,13 @@ body {
 
 html {
 	font-family: "Outfit", sans-serif;
-	font-optical-sizing: auto;
+/*	font-optical-sizing: auto;*/
 	font-weight: 400;
 	font-style: normal;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smooth: never;
 
 	background-color: var(--slate-300); 
 	height: 100%;
