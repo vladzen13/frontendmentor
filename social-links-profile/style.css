@@ -1,0 +1,97 @@
+:root {
+	--green: hsl(75, 94%, 57%);
+	--white: hsl(0, 0%, 100%);
+	--gray-700: hsl(0, 0%, 20%);
+	--gray-800: hsl(0, 0%, 12%);
+	--gray-900: hsl(0, 0%, 8%);
+
+	--font-size0: 14px;
+	--bold0: 400;
+	--bold1: 600;
+	--bold2: 700;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1, p {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: "Inter", sans-serif;
+	font-weight: var(--bold0);
+	font-size: var(--font-size0);
+	font-style: normal;
+
+	background-color: var(--gray-900); 
+}
+
+html, body, .center {
+	height: 100%;
+
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.profile {
+	max-width: 320px;
+
+	padding: 30px;
+	border-radius: 10px;
+
+	background-color: var(--gray-800); 
+
+	display: grid;
+	gap: 15px;
+}
+
+.profile > * {
+	margin-inline: auto;
+	text-align: center;
+	color: var(--white); 
+
+}
+
+.profile img {
+	border-radius: 50%;
+	width: 33%;
+	padding-block: 10px;
+
+}
+
+.profile .title {
+	font-weight: var(--bold1);
+	font-size: 24px;	
+
+}
+
+.profile .location {
+	color: var(--green); 
+	font-weight: var(--bold2);
+}
+
+.profile .description {
+	padding-block: 10px;
+
+}
+
+.profile button {
+	width: 100%;
+	padding-block: 15px;
+	border-radius: 6px;
+	border-width: 0;
+	font-weight: var(--bold2);
+	background-color: var(--gray-700); 
+
+}
+
