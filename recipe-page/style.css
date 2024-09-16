@@ -1,0 +1,213 @@
+/*- RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*- RESET */
+
+
+/*- Family: [Young Serif](https://fonts.google.com/specimen/Young+Serif)
+- Weights: 400
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 600, 700
+*/
+
+:root {
+	--white: hsl(0, 0%, 100%);
+
+	--stone-100: hsl(30, 54%, 90%);
+	--stone-150: hsl(30, 18%, 87%);
+	--stone-600: hsl(30, 10%, 34%);
+	--stone-900: hsl(24, 5%, 18%);
+
+	--brown-800: hsl(14, 45%, 36%);
+
+	--rose-50: hsl(330, 100%, 98%);
+	--rose-800: hsl(332, 51%, 32%);
+
+	--font-size0: 16px;
+
+	--bold0: 400;
+	--bold1: 600;
+	--bold2: 700;
+}
+
+html {
+	font-family: "Outfit", sans-serif;
+	font-weight: var(--bold0);
+	font-size: var(--font-size0);
+	font-style: normal;
+
+	background-color: var(--gray-900); 
+}
+
+main {
+	color: var(--stone-600);
+}
+
+h1 {
+	font-size: 28px;
+	color: var(--stone-900);
+}
+
+h2 {
+	font-size: 24px;
+	color: var(--brown-800);
+}
+
+main img {
+	width: 100%;
+}
+
+.content {
+	padding: 30px;
+	display: grid;
+	gap: 20px;
+}
+
+.title {
+	font-family: "Young Serif", sans-serif;
+	font-weight: var(--bold0);
+}
+
+blockquote {
+	background-color: var(--rose-50);
+	padding: 25px;
+	border-radius: 10px;
+}
+
+blockquote h3 {
+	font-size: 20px;
+	color: var(--rose-800);
+	font-weight: var(--bold1);
+}
+
+b {
+	font-weight: var(--bold1);
+}
+
+blockquote, ul, ol {
+	display: grid;
+	gap: 20px;
+}
+
+ul, ol {
+	list-style-position: inside;
+	padding-inline: 0.5rem;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ul li::marker {
+	color: var(--rose-800);
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ol li::marker {
+	font-weight: var(--bold1);
+	color: var(--brown-800);
+
+}
+
+ol li > b {
+	padding-left: 0.75rem;
+}
+
+hr {
+	width: 95%;
+	border: 0;
+	border-top: 1px  solid var(--stone-150);
+}
+
+
+tr {
+	border-bottom: 1px  solid var(--stone-150);
+}
+
+td {
+	font-weight: var(--bold1);
+	color: var(--brown-800);
+		padding-block: 15px;	
+		padding-inline: 30px;}
+
+th, td {
+	width: 50%;
+	text-align: left;
+}
+
+th {
+	padding-block: 15px;	
+	padding-inline: 30px;
+}
+
+@media screen and (min-width: 800px) {
+	body {
+		background-color: var(--stone-100);
+	}
+
+	main {
+		max-width: 45%;
+		background-color: var(--white);
+		padding: 30px;
+		border-radius: 20px;
+		box-shadow: 0 0 25px -15px gray;
+
+		margin-inline: auto;
+		margin-block: 10vh;
+	}
+
+	main img {
+		border-radius: 15px;
+	}
+
+	div.content {
+		padding-inline: 0;
+	}
+}
