@@ -1,0 +1,192 @@
+/*- RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*- RESET */
+
+:root {
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+
+	--very-dark-blue: hsl(234, 12%, 34%);
+	--grayish-blue: hsl(229, 6%, 66%);
+	--very-light-gray: hsl(0, 0%, 98%);
+
+	--font-size0: 15px;
+
+	--font-basic: "Poppins", sans-serif;
+
+	--bold0: 200;
+	--bold1: 400;
+	--bold2: 600;
+}
+
+html {
+	font-family: var(--font-basic);
+	font-weight: var(--bold1);
+	font-size: var(--font-size0);
+	font-style: normal;
+	color: var(--grayish-blue);
+}
+
+
+body {
+	background-color: var(--very-light-gray); 
+}
+
+
+div.hero {
+	margin-inline: auto;
+	max-width: 30rem;
+	text-align: center;
+	margin-block: 5rem;
+
+}
+
+
+div.cards {
+	display: grid;
+	gap: 1.5rem;
+	margin-block: 5rem;
+	margin-inline: 1rem;
+	justify-content: center;
+}
+
+
+div.subcards {
+	display: grid;
+	gap: 1.5rem;
+	justify-content: center;
+}
+
+
+div.card {
+	box-sizing: border-box;
+	max-width: 24rem;
+
+	background-color: var(--very-light-gray);
+	padding: 2rem;
+
+	border-top: 3px solid var(--_border-color);
+	border-radius: 5px;
+
+	box-shadow: 0 8px 30px -20px var(--very-dark-blue);
+}
+
+.cyan {
+	--_border-color: var(--cyan);
+}
+.red {
+	--_border-color: var(--red);
+}
+.orange {
+	--_border-color: var(--orange);
+}
+.blue {
+	--_border-color: var(--blue);
+}
+
+
+
+
+@media screen and (min-width: 72rem) {
+	div.cards {
+		grid-template-columns: auto auto auto;
+	}
+
+	div.card {
+		margin-block: auto;
+	}
+
+}
+
+
+.hero {
+	line-height: 1.5;
+}
+
+.hero .header1 {
+	font-weight: var(--bold0);
+	font-size: 1.5rem;
+	color: var(--very-dark-blue);
+}
+
+.hero .header2 {
+	font-weight: var(--bold2);
+	font-size: 1.5rem;
+	color: var(--very-dark-blue);
+}
+
+.hero .description {
+	padding: 1rem;
+}
+
+
+
+
+
+.card .title {
+	font-size: 1.25rem;
+	font-weight: var(--bold2);
+	color: var(--very-dark-blue);
+	line-height: 2;
+}
+
+
+
+.card .description {
+	font-size: 0.85rem;
+	line-height: 1.6;
+
+}
+
+
+.card img {
+	display: block;
+	margin-left: auto;
+	margin-top: 2rem;
+}
