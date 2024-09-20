@@ -108,7 +108,7 @@ div.card {
 	box-sizing: border-box;
 	max-width: 24rem;
 
-	background-color: var(--very-light-gray);
+	background-color: white;
 	padding: 2rem;
 
 	border-top: 3px solid var(--_border-color);
