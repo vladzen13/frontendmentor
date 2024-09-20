@@ -84,7 +84,7 @@ div.hero {
 	max-width: 30rem;
 	text-align: center;
 	margin-block: 5rem;
-
+	line-height: 1.5;
 }
 
 
@@ -112,7 +112,9 @@ div.card {
 	padding: 2rem;
 
 	border-top: 3px solid var(--_border-color);
-	border-radius: 5px;
+    border-top-left-radius: 5px 3px;
+    border-top-right-radius: 5px 3px;
+
 
 	box-shadow: 0 8px 30px -20px var(--very-dark-blue);
 }
@@ -132,23 +134,6 @@ div.card {
 
 
 
-
-@media screen and (min-width: 72rem) {
-	div.cards {
-		grid-template-columns: auto auto auto;
-	}
-
-	div.card {
-		margin-block: auto;
-	}
-
-}
-
-
-.hero {
-	line-height: 1.5;
-}
-
 .hero .header1 {
 	font-weight: var(--bold0);
 	font-size: 1.5rem;
@@ -164,8 +149,6 @@ div.card {
 .hero .description {
 	padding: 1rem;
 }
-
-
 
 
 
@@ -190,3 +173,26 @@ div.card {
 	margin-left: auto;
 	margin-top: 2rem;
 }
+
+
+
+@media screen and (min-width: 72rem) {
+	div.cards {
+		grid-template-columns: auto auto auto;
+	}
+
+	div.card {
+		margin-block: auto;
+	}
+
+
+	div.hero {
+		max-width: 50rem;
+	}
+
+	.hero  .header1, .hero .header2 {
+		font-size: 2.5rem;
+	}
+
+}
+
