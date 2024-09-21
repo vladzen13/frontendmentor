@@ -1,0 +1,176 @@
+/*- RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*- RESET */
+
+:root {
+	--purple: hsl(264, 55%, 52%);
+	--gray-blue: hsl(220, 19%, 35%);
+	--white: hsl(0, 0%, 100%);
+	--dark: hsl(218, 30%, 14%);
+
+	--light-grayish-blue: hsl(214, 41%, 95%);		/*	background-color: ;*/
+	--light-gray: hsl(0, 0%, 81%);		
+
+	--font-size0: 13px;
+	--font-basic: "Barlow Semi Condensed", sans-serif;
+
+	--bold0: 500;
+	--bold1: 600;
+}
+
+html {
+	font-family: var(--font-basic);
+	font-weight: var(--bold0);
+	font-size: var(--font-size0);
+	font-style: normal;
+	color: var(--grayish-blue);
+}
+
+body {
+	background-color: var(--light-grayish-blue); 
+}
+
+.cards {
+	display: grid;
+	gap: 2rem;
+
+	width: 90%;
+	max-width: 20rem;
+	margin-inline: auto;
+	margin-block: 10vh;
+}
+
+.card {
+	border-radius: 0.5rem;
+	padding: 2.5rem;
+
+	display: grid;
+	gap: 1.5rem;
+}
+
+.card h3 {
+	font-size: 1.5rem;
+	font-weight: var(--bold1);
+}
+
+.card .text {
+	opacity: 0.7;
+	line-height: 1.3;
+}
+
+
+.card-purple {
+	background-color: var(--purple);
+	color: var(--white);
+}
+
+.card-grey {
+	background-color: var(--gray-blue);
+	color: var(--white);
+	
+}
+.card-white {
+	background-color: var(--white);
+	color: var(--gray-blue);
+
+	box-shadow: 1.5rem 1.5rem 5rem -4rem var(--gray-blue);
+	
+}
+.card-dark {
+	background-color: var(--dark);
+	color: var(--white);
+	
+}
+
+
+.author {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: min-content auto;
+	gap: 1rem;
+	align-items: center;
+}
+
+.author img {
+	border-radius: 50%;
+	max-width: 2.5rem;
+}
+
+.author-info {
+	line-height: 1.3;
+}
+
+
+.author-info .role {
+	opacity: 0.5;
+}
+
+@media screen and (min-width: 72rem) {
+	.cards {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		max-width: 86rem;
+
+	}
+
+	div#daniel, div#patrick {
+		grid-column: span 2;
+	}
+
+	div#kira {
+		grid-row: span 2 / 1;
+		grid-column: 4;
+	}
+
+
+}
