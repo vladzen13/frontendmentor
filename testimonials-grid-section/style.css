@@ -113,6 +113,9 @@ body {
 .card-purple {
 	background-color: var(--purple);
 	color: var(--white);
+	background-image: url("images/bg-pattern-quotation.svg");
+	background-repeat: no-repeat;
+	background-position-x: 78%;
 }
 
 .card-grey {
